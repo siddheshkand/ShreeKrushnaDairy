@@ -1,0 +1,181 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block main %}
+
+    <section class="section-features js--section-features" id="features">
+        <div class="row">
+            <h2>शुध्द &mdash; समृद्ध &mdash; स्वच्छ </h2>
+            <p class="long-copy" style="text-align: center"> उत्पादने जे स्वच्छ वातावरणात तयार केली जातात.आपल्या आरोग्य
+                साठी
+                चांगले असलेले उत्पादन.
+            </p>
+        </div>
+
+        <div class="row js--wp-1">
+            <div class="col span-1-of-4 box">
+                <i class="ion-ios-infinite-outline icon-big"></i>
+                <h3> ३६५ दिवस सेवा </h3>
+                <p>
+                    आम्ही ३६५ दिवस आपल्या सेवा साठी तत्पर आहोत
+                </p>
+            </div>
+            <div class="col span-1-of-4 box">
+                <i class="ion-ios-stopwatch-outline icon-big"></i>
+                <h3>वेळेवर सेवा</h3>
+                <p>
+                    तुम्हाला वेळेवर सेवा देणे हेच आमचे लक्ष्य
+                </p>
+            </div>
+            <div class="col span-1-of-4 box">
+                <i class="ion-ios-nutrition-outline icon-big"></i>
+                <h3>१००% ऑरगॅनिक </h3>
+                <p>
+                    आमचे सर्व प्रॉडक्ट १००% शुद्ध व प्रेसेर्व्हटाईव्ह फ्री आहे
+                </p>
+            </div>
+            <div class="col span-1-of-4 box">
+                <i class="ion-ios-cart-outline icon-big"></i>
+                <h3>विविध प्रकारच्या दुधाचे उत्पादन</h3>
+                <p>
+                    दूध दही लस्सी लोणी श्रीखंड पनीर तूप खावा
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-meals" id="dairy">
+        <ul class="meals-showcase clearfix">
+            <li>
+                <figure class="meal-photo">
+                    <img src="{% static 'resources/img/1.jpg' %}" alt="">
+                </figure>
+            </li>
+            <li>
+                <figure class="meal-photo">
+                    <img src="{% static 'resources/img/2.jpg' %}" alt="">
+                </figure>
+            </li>
+            <li>
+                <figure class="meal-photo">
+                    <img src="{% static 'resources/img/3.jpg' %}" alt="">
+                </figure>
+            </li>
+            <li>
+                <figure class="meal-photo">
+                    <img src="{% static 'resources/img/4.jpg' %}" alt="">
+                </figure>
+            </li>
+        </ul>
+        <ul class="meals-showcase clearfix">
+            <li>
+                <figure class="meal-photo">
+                    <img src="{% static 'resources/img/5.jpg' %}" alt="">
+                </figure>
+            </li>
+            <li>
+                <figure class="meal-photo">
+                    <img src="{% static 'resources/img/6.jpg' %}" alt="">
+                </figure>
+            </li>
+            <li>
+                <figure class="meal-photo">
+                    <img src="{% static 'resources/img/7.jpg' %}" alt="">
+                </figure>
+            </li>
+            <li>
+                <figure class="meal-photo">
+                    <img src="{% static 'resources/img/8.jpg' %}" alt="">
+                </figure>
+            </li>
+        </ul>
+    </section>
+
+
+    <section class="section-testimonials">
+        <div class="row">
+            <h2>आमच्या ग्राहकांचे मत </h2>
+        </div>
+        <div class="row">
+            <div class="col span-1-of-3">
+                <blockquote>
+                    उत्तम सुविधा व त्वरित सेवा
+                    <cite><img src="{% static 'resources/img/customer-1.jpg' %}" alt="Customer 1 photo">ग्राहकाचे नाव
+                    </cite>
+                </blockquote>
+            </div>
+            <div class="col span-1-of-3">
+                <blockquote>
+                    उत्तम सुविधा व त्वरित सेवा
+                    <cite><img src="{% static 'resources/img/customer-2.jpg' %}" alt="Customer 2 photo">ग्राहकाचे नाव
+                    </cite>
+                </blockquote>
+            </div>
+            <div class="col span-1-of-3">
+                <blockquote>
+                    उत्तम सुविधा व त्वरित सेवा
+                    <cite><img src="{% static 'resources/img/customer-3.jpg' %}" alt="Customer 3 photo">ग्राहकाचे
+                        नाव</cite>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section-form" id="contact">
+        <div class="row">
+            <h2>संपर्क साधा किंवा किंमत जाणून घ्या </h2>
+        </div>
+        <div class="row">
+            <form method="post" action="#" class="contact-form">
+                <div class="row">
+                    <div class="col span-1-of-3">
+                        <label for="name">नाव</label>
+                    </div>
+                    <div class="col span-2-of-3">
+                        <input type="text" name="name" id="name" placeholder="तुमचे नाव " required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col span-1-of-3">
+                        <label for="email">फोन नंबर</label>
+                    </div>
+                    <div class="col span-2-of-3">
+                        <input type="number" name="phone" id="" placeholder="फोन नंबर" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col span-1-of-3">
+                        <label for="">तुम्हला काय हवय ते सिलेक्ट करा </label>
+                    </div>
+                    <select multiple="multiple" class="col span-2-of-3">
+                        <option value="दूध ">दूध</option>
+                        <option value="तूप ">तूप</option>
+                        <option value="पनीर ">पनीर</option>
+                        <option value="श्रीखंड ">श्रीखंड</option>
+                        <option value="ताक ">ताक</option>
+                        <option value="बासुंदी ">बासुंदी</option>
+                        <option value="अन्य ">अन्य</option>
+                    </select>
+                </div>
+                <div class="row">
+                    <div class="col span-1-of-3">
+                        <label>सविस्तर माहिती</label>
+                    </div>
+                    <div class="col span-2-of-3">
+                        <textarea name="message" placeholder="सविस्तर माहिती"></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col span-1-of-3">
+                        <label>&nbsp;</label>
+                    </div>
+                    <div class="col span-2-of-3">
+                        <input type="submit" value="पाठवा ">
+                    </div>
+                </div>
+
+            </form>
+
+        </div>
+    </section>
+{% endblock main %}

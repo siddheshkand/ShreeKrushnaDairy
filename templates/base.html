@@ -1,0 +1,135 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {#    TODO ADD SEO#}
+    <meta name="description" content="ADD SEO">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'vendors/css/normalize.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'vendors/css/grid.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'vendors/css/ionicons.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'vendors/css/animate.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'resources/css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'resources/css/queries.css' %}">
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic' rel='stylesheet' type='text/css'>
+    <title>{% block  title %}श्रीकृष्ण नॅचरल मिल्क डेअरी{% endblock title %}</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="{% static '/resources/favicons/apple-touch-icon-57x57.png' %}">
+    <link rel="apple-touch-icon" sizes="60x60" href="{% static '/resources/favicons/apple-touch-icon-60x60.png' %}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{% static '/resources/favicons/apple-touch-icon-72x72.png' %}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{% static '/resources/favicons/apple-touch-icon-76x76.png' %}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{% static '/resources/favicons/apple-touch-icon-114x114.png' %}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{% static '/resources/favicons/apple-touch-icon-120x120.png' %}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{% static '/resources/favicons/apple-touch-icon-144x144.png' %}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{% static '/resources/favicons/apple-touch-icon-152x152.png' %}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static '/resources/favicons/apple-touch-icon-180x180.png' %}">
+    <link rel="icon" type="image/png" href="{% static '/resources/favicons/favicon-32x32.png' %}" sizes="32x32">
+    <link rel="icon" type="image/png" href="{% static '/resources/favicons/favicon-194x194.png' %}" sizes="194x194">
+    <link rel="icon" type="image/png" href="{% static '/resources/favicons/favicon-96x96.png' %}" sizes="96x96">
+    <link rel="icon" type="image/png" href="{% static '/resources/favicons/android-chrome-192x192.png' %}"
+          sizes="192x192">
+    <link rel="icon" type="image/png" href="{% static '/resources/favicons/favicon-16x16.png' %}" sizes="16x16">
+    <link rel="manifest" href="{% static '/resources/favicons/manifest.json' %}">
+    <link rel="shortcut icon" href="{% static '/resources/favicons/favicon.ico' %}">
+    {#FONTS #}
+    <link href="https://fonts.googleapis.com/css?family=Asar" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Laila" rel="stylesheet">
+    {#FONT ENDED#}
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-TileImage" content="/resources/favicons/mstile-144x144.png">
+    <meta name="msapplication-config" content="/resources/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    {#    TODO ADD TO SEPRATE STYLESHEET#}
+    <style>
+        body {
+            font-family: 'Laila', 'Lato', serif;
+        }
+
+        .nav-item {
+            font-family: 'Laila', 'Lato', serif;
+            font-weight: bold;
+        }
+
+        nav > .row > .logo, .logo-black {
+            font-family: 'Asar', 'Lato', serif;
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+
+        nav > .row > .logo {
+            margin-top: 43px;
+            color: white;
+        }
+
+        nav > .row > .logo-black {
+            margin-top: 23px;
+        }
+    </style>
+</head>
+
+<body>
+<header>
+    <nav>
+        <div class="row">
+            <span class="logo">श्रीकृष्ण नॅचरल मिल्क डेअरी</span>
+            <span class="logo-black">श्रीकृष्ण नॅचरल मिल्क डेअरी</span>
+            {#            <img src="{% static 'resources/img/logo-white.png' %}" alt="Omnifood logo" class="logo">#}
+            {#            <img src="{% static 'resources/img/logo.png' %}" alt="Omnifood logo" class="logo-black">#}
+            <ul class="main-nav js--main-nav">
+                <li><a class="nav-item" href="#features">आमची उत्पादने</a></li>
+                <li><a class="nav-item" href="#dairy">डेअरी</a></li>
+                <li><a class="nav-item" href="#contact">आमच्याशी संपर्क साधा</a></li>
+                <li><a class="nav-item" href="#">लॉग इन करा</a></li>
+            </ul>
+            <a class="mobile-nav-icon js--nav-icon"><i class="ion-navicon-round"></i></a>
+        </div>
+    </nav>
+    <div class="hero-text-box">
+        <h1>गाय व म्हशीचे ताजे व स्वच्छ दूध<br>दूध, दही, लस्सी, लोणी, श्रीखंड, पनीर, तूप, खवा </h1>
+        <a class="btn btn-full js--scroll-to-plans" href="#dairy">आमचे प्रॉडक्ट्स </a>
+        <a class="btn btn-ghost js--scroll-to-start" href="#contact">किंमत जाणून घ्या </a>
+    </div>
+</header>
+{% block main %}
+{% endblock main %}
+<footer>
+    <div class="row">
+        <div class="col span-1-of-2">
+            <ul class="footer-nav">
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+        </div>
+        <div class="col span-1-of-2">
+            <ul class="social-links">
+                <li><a href="#"><i class="ion-social-facebook"></i></a></li>
+                <li><a href="#"><i class="ion-social-twitter"></i></a></li>
+                <li><a href="#"><i class="ion-social-googleplus"></i></a></li>
+                <li><a href="#"><i class="ion-social-instagram"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <p>
+            Maintained By by Oxvsys.&copy;
+            <script>document.write(new Date().getFullYear())</script>
+            All rights reserved.
+        </p>
+    </div>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+<script src="https://cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://cdn.jsdelivr.net/selectivizr/1.0.3b/selectivizr.min.js"></script>
+<script src="{% static   'vendors/js/jquery.waypoints.min.js' %}"></script>
+<script src="{% static   'resources/js/script.js' %}"></script>
+<script src="{% static 'vendors/js/multipleselect.js' %}"></script>
+<script>
+
+</script>
+
+</body>
+
+</html>
