@@ -1,6 +1,7 @@
 {% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -66,13 +67,40 @@
             margin-top: 23px;
         }
 
-        .zindex5 {
+        .callout {
             z-index: -5
+        }
+
+        .success {
+            color: #00c700;
+            font-size: 2em;
+        }
+
+        #message {
+            display: inline;
+        }
+
+        .text-center {
+            text-align: center;
         }
     </style>
 </head>
 
 <body>
+{# Notification #}
+{% if messages %}
+    <div class="row" id="message">
+        <div class="text-center">
+            {% for message in messages %}
+                <div data-alert class="callout {{ message.tags }}">
+                    {{ message }}
+                    <a href="#" class="close" onclick="close_div()">&times;</a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endif %}
+
 <header>
     <nav>
         <div class="row">
@@ -95,8 +123,9 @@
         <a class="btn btn-ghost js--scroll-to-start" href="#contact">किंमत जाणून घ्या </a>
     </div>
 </header>
-{% block main %}
-{% endblock main %}
+
+{% block main %}{% endblock main %}
+
 <footer>
     <div class="row">
         <div class="col span-1-of-2">
@@ -123,6 +152,7 @@
     </div>
 </footer>
 
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
 <script src="https://cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -143,8 +173,13 @@
             hero.style.zIndex = "0";
         }
     });
+
+    function close_div() {
+        message = document.getElementById('message');
+        message.remove();
+    }
 </script>
 
-</body>
 
+</body>
 </html>

@@ -127,6 +127,7 @@
         </div>
         <div class="row">
             <form method="post" action="#" class="contact-form">
+                {% csrf_token %}
                 <div class="row">
                     <div class="col span-1-of-3">
                         <label for="name">नाव</label>
@@ -137,17 +138,17 @@
                 </div>
                 <div class="row">
                     <div class="col span-1-of-3">
-                        <label for="email">फोन नंबर</label>
+                        <label for="phone">फोन नंबर</label>
                     </div>
                     <div class="col span-2-of-3">
-                        <input type="number" name="phone" id="" placeholder="फोन नंबर" required>
+                        <input type="text" name="phone" id="phone" placeholder="फोन नंबर" required>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col span-1-of-3">
                         <label for="">तुम्हला काय हवय ते सिलेक्ट करा </label>
                     </div>
-                    <select multiple="multiple" class="col span-2-of-3">
+                    <select multiple="multiple" class="col span-2-of-3" name="item">
                         <option value="दूध ">दूध</option>
                         <option value="तूप ">तूप</option>
                         <option value="पनीर ">पनीर</option>
@@ -162,7 +163,7 @@
                         <label>सविस्तर माहिती</label>
                     </div>
                     <div class="col span-2-of-3">
-                        <textarea name="message" placeholder="सविस्तर माहिती"></textarea>
+                        <textarea name="description" placeholder="सविस्तर माहिती"></textarea>
                     </div>
                 </div>
                 <div class="row">
