@@ -1,0 +1,12 @@
+{
+  "name": "Dairy Suite 360",
+  "short_name": "DS360",
+  "theme_color": "#2196f3",
+  "background_color": "#2196f3",
+  "display": "minimal-ui",
+  "orientation": "portrait",
+  "Scope": "/",
+  "start_url": "/",
+  "icons": null,
+  "splash_pages": null
+}

@@ -17,7 +17,7 @@
     <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic' rel='stylesheet' type='text/css'>
     <title>{% block  title %}श्रीकृष्ण नॅचरल मिल्क डेअरी{% endblock title %}</title>
 
-    <link rel="manifest" href="{% static '/resources/favicons/manifest.json' %}">
+    <link rel="manifest" href="{% static 'manifest.json' %}">
     <link rel="shortcut icon" href="{% static '/img/milk.png' %}">
     {#FONTS #}
     <link href="https://fonts.googleapis.com/css?family=Asar" rel="stylesheet">
@@ -69,8 +69,9 @@
         .text-center {
             text-align: center;
         }
+
         @media only screen and (max-width: 767px) {
-            .tagline{
+            .tagline {
                 font-size: 1.4em;
             }
         }
