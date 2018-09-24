@@ -18,8 +18,11 @@ from django.urls import path
 from django.conf.urls import include, url
 from . import views
 
+app_name = 'reviews'
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^$', views.hello_world),
-    
+    url(r'^dairy/', include(('Dairy.urls', 'Dairy'), namespace='dairy')),
+
 ]
