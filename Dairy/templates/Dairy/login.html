@@ -28,7 +28,8 @@
             <div class="col-sm">
             </div>
             <div class="col-sm">
-                <form class="text-center border border-light p-5" style="width: auto">
+                <form class="text-center border border-light p-5" style="width: auto" method="post">
+                    {% csrf_token %}
                     <div>
                         <img src="{% static 'img/milk.png' %}" class="logo">
                         <hr>
@@ -36,8 +37,8 @@
                     </div>
                     <p class="h4 mb-4">Dairy Suite 360</p>
 
-                    <input type="text" class="form-control mb-4" placeholder="नाव">
-                    <input type="password" class="form-control mb-4" placeholder="पासवर्ड">
+                    <input type="text" class="form-control mb-4" placeholder="नाव" name="username">
+                    <input type="password" class="form-control mb-4" placeholder="पासवर्ड" name="password">
                     <button class="btn btn-info btn-block my-4 waves-effect waves-light" type="submit">लॉग इन</button>
                 </form>
             </div>
