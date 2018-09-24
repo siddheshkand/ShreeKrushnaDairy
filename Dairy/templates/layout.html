@@ -14,9 +14,11 @@
     <link href="{% static 'css/style.css' %}" rel="stylesheet">
     <style>
         #profile-icon {
-            height: 35px;
+            height: 20px;
         }
     </style>
+    {% block style %}
+    {% endblock style %}
 </head>
 <body>
 {% block nav %}
@@ -52,6 +54,11 @@
             </ul>
             <ul class="navbar-nav ml-auto nav-flex-icons">
                 <li class="nav-item">
+                    <a class="nav-link waves-effect waves-light">
+                        Welcome Admin
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link waves-effect waves-light">1
                         <i class="fa fa-envelope"></i>
                     </a>
@@ -81,6 +88,11 @@
 </main>
 
 {% block footer %}
+    <footer class="page-footer font-small blue">
+        <div class="footer-copyright text-center py-3">© 2018 Copyright:
+            <a href="#"> oxvsys</a>
+        </div>
+    </footer>
 {% endblock footer %}
 
 <script type="text/javascript" src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
