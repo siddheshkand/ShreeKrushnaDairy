@@ -7,3 +7,6 @@ class UserForm(models.Model):
     phone = models.CharField(max_length=10)
     item = models.TextField()
     desc = models.TextField()
+
+    def __str__(self):
+        return self.name + " " + self.phone + " " + self.item + " " + self.desc
