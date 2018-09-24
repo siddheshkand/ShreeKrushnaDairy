@@ -14,6 +14,6 @@ def home(request):
         instance.item = ','.join(request.POST.getlist("item"))
         instance.desc = request.POST.get("description")
         instance.save()
-        messages.add_message(request, messages.SUCCESS, "आम्ही लवकरच अप्प्ल्याशी संपर्क साधू")
+        messages.add_message(request, messages.SUCCESS, "आम्ही लवकरच आपल्याशी संपर्क साधू")
 
     return render(request, 'Home/index.html')
