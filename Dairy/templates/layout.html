@@ -15,6 +15,8 @@
     <link rel="manifest" href="{% static 'manifest.json' %}">
     <link rel="shortcut icon" href="{% static 'img/milk.png' %}">
     <link href="https://fonts.googleapis.com/css?family=Asar" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+
     <style>
         #profile-icon {
             height: 20px;
@@ -26,6 +28,16 @@
 
         .marathi_font {
             font-family: Asar, serif !important;
+        }
+
+        .marathi_font-1 {
+            font-family: 'Noto Sans', sans-serif !important;
+            font-weight: bold;
+        }
+
+        .bold-1 {
+            font-weight: bolder;
+            font-size: 1.2em;
         }
     </style>
     {% block style %}
@@ -40,36 +52,24 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent-5">
-            <ul class="navbar-nav mr-auto">
+            <ul class="navbar-nav mr-auto marathi_font-1">
                 <li class="nav-item active">
-                    <a class="nav-link waves-effect waves-light" href="#">Home
+                    <a class="nav-link waves-effect waves-light" href="#">होम
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link waves-effect waves-light" href="#">Features</a>
+                    <a class="nav-link waves-effect waves-light" href="#">वैशिष्ट्ये</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link waves-effect waves-light" href="#">Pricing</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle waves-effect waves-light" id="navbarDropdownMenuLink-5"
-                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown
-                    </a>
-                    <div class="dropdown-menu dropdown-secondary" aria-labelledby="navbarDropdownMenuLink-5">
-                        <a class="dropdown-item waves-effect waves-light" href="#">Action</a>
-                        <a class="dropdown-item waves-effect waves-light" href="#">Another action</a>
-                        <a class="dropdown-item waves-effect waves-light" href="#">Something else here</a>
-                    </div>
+                    <input type="search" placeholder="शोधा" aria-label="Search" class="form-control">
                 </li>
             </ul>
             <ul class="navbar-nav ml-auto nav-flex-icons">
+
                 <li class="nav-item">
-                    <input type="search" placeholder="Type your query" aria-label="Search" class="form-control">
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link waves-effect waves-light">
-                        Welcome Admin
+                    <a class="nav-link waves-effect waves-light bold-1">
+                        स्वागत आहे {{ user }}
                     </a>
                 </li>
                 <li class="nav-item">

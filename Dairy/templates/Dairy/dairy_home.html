@@ -2,8 +2,24 @@
 {% load staticfiles %}
 {% block style %}
     <style>
-        .card-body {
-    padding: 5px;
+
+        .custom-dashboard-button {
+            font-size: 2em;
+            font-family: Asar, serif;
+            font-weight: bold;
+            width: 100%;
+            height: 200px;
+        }
+
+        .col-md-3 .mr-1 {
+            font-size: 1.4em;
+        }
+
+        @media only screen and (max-width: 767px) {
+            .custom-dashboard-button {
+                font-size: 1.4em;
+                height: 120px;
+            }
         }
     </style>
 
@@ -12,35 +28,27 @@
     <div class="container-fluid mt-5">
         <div class="row wow fadeIn" style="visibility:visible;animation-name:fadeIn;padding: 40px">
             <div class="col-md-3">
-                <a class="card">
-                    <div class="card-body">
-                        <img class="card-img-top" src="{% static 'img/dashboard_icon/farm.png' %}"/>
-                        <h4 class="text-center marathi_font"><a> श्रीकृष्ण डेअरी फार्म </a></h4>
-                    </div>
+                <a class="btn btn-primary custom-dashboard-button">
+                    <i class="fa fa-leaf mr-1"></i>
+                    <br> श्रीकृष्ण डेअरी फार्म
                 </a>
             </div>
             <div class="col-md-3">
-                <a class="card">
-                    <div class="card-body">
-                        <img class="card-img-top" src="{% static 'img/dashboard_icon/milk.png' %}">
-                        <h4 class="text-center marathi_font"><a>श्रीकृष्ण नाचरल मिल्क डेअरी </a></h4>
-                    </div>
+                <a class="btn btn-primary custom-dashboard-button">
+                    <i class="fa fa-filter mr-1"></i>
+                    <br>श्रीकृष्ण नॅचरल मिल्क डेअरी
                 </a>
             </div>
             <div class="col-md-3">
-                <a class="card">
-                    <div class="card-body">
-                        <img class="card-img-top" src="{% static 'img/dashboard_icon/bacht.png' %}">
-                        <h4 class="text-center marathi_font"><a>बचत योजना</a></h4>
-                    </div>
+                <a class="btn btn-primary custom-dashboard-button">
+                    <i class="fa fa-money mr-1"></i>
+                    <br>बचत योजना
                 </a>
             </div>
             <div class="col-md-3">
-                <a class="card">
-                    <div class="card-body">
-                        <img class="card-img-top" src="{% static 'img/dashboard_icon/other.png' %}">
-                        <h4 class="text-center marathi_font"><a>अन्य</a></h4>
-                    </div>
+                <a class="btn btn-primary custom-dashboard-button">
+                    <i class="fa fa-book mr-1"></i>
+                    <br>अन्य
                 </a>
             </div>
         </div>
@@ -216,16 +224,26 @@
 
 {% block script %}
     <script>
+        Chart.defaults.global.defaultFontStyle="bold";
+        {#Chart.defaults.global.defaultFontSize="larger";#}
+        Chart.defaults.global.defaultFontFamily	="'Noto Sans','sans-serif'";
 
-        // Line
         var ctx = document.getElementById("myChart").getContext('2d');
         var myChart = new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+                labels: [
+                    {% for key in dict %}
+                        "{{ key }}",
+                    {% endfor %}
+                ],
                 datasets: [{
-                    label: '# of Votes',
-                    data: [12, 19, 3, 5, 2, 3],
+                    label: 'पदार्थ ',
+                    data: [
+                        {% for value in dict.values %}
+                            {{ value }},
+                        {% endfor %}
+                    ],
                     backgroundColor: [
                         'rgba(255, 99, 132, 0.2)',
                         'rgba(54, 162, 235, 0.2)',
