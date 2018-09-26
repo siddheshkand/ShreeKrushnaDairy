@@ -70,8 +70,6 @@
             text-align: center;
         }
 
-
-
         @media only screen and (max-width: 767px) {
             .tagline {
                 font-size: 1.4em;
@@ -106,7 +104,11 @@
                 <li><a class="nav-item" href="#features">आमची उत्पादने</a></li>
                 <li><a class="nav-item" href="#dairy">डेअरी</a></li>
                 <li><a class="nav-item" href="#contact">आमच्याशी संपर्क साधा</a></li>
-                <li><a class="nav-item" href="{% url 'dairy:login' %}">लॉग इन करा</a></li>
+                {% if user.is_authenticated %}
+                    <li><a class="nav-item" href="{% url 'dairy:home' %}">डॅशबोर्ड</a></li>
+                {% else %}
+                    <li><a class="nav-item" href="{% url 'dairy:login' %}">लॉग इन करा</a></li>
+                {% endif %}
             </ul>
             <a class="mobile-nav-icon js--nav-icon"><i class="ion-navicon-round"></i></a>
         </div>

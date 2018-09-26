@@ -28,19 +28,19 @@
     <div class="container-fluid mt-5">
         <div class="row wow fadeIn" style="visibility:visible;animation-name:fadeIn;padding: 40px">
             <div class="col-md-3">
-                <a class="btn btn-primary custom-dashboard-button">
+                <a class="btn btn-primary custom-dashboard-button" href="{% url 'dairy_farm:home' %}">
                     <i class="fa fa-leaf mr-1"></i>
                     <br> श्रीकृष्ण डेअरी फार्म
                 </a>
             </div>
             <div class="col-md-3">
-                <a class="btn btn-primary custom-dashboard-button">
+                <a class="btn btn-primary custom-dashboard-button" href="{% url 'dairy_natural_milk:home' %}">
                     <i class="fa fa-filter mr-1"></i>
                     <br>श्रीकृष्ण नॅचरल मिल्क डेअरी
                 </a>
             </div>
             <div class="col-md-3">
-                <a class="btn btn-primary custom-dashboard-button">
+                <a class="btn btn-primary custom-dashboard-button" href="{% url 'dairy_bachat:home' %}">
                     <i class="fa fa-money mr-1"></i>
                     <br>बचत योजना
                 </a>
@@ -224,9 +224,9 @@
 
 {% block script %}
     <script>
-        Chart.defaults.global.defaultFontStyle="bold";
+        Chart.defaults.global.defaultFontStyle = "bold";
         {#Chart.defaults.global.defaultFontSize="larger";#}
-        Chart.defaults.global.defaultFontFamily	="'Noto Sans','sans-serif'";
+        Chart.defaults.global.defaultFontFamily = "'Noto Sans','sans-serif'";
 
         var ctx = document.getElementById("myChart").getContext('2d');
         var myChart = new Chart(ctx, {

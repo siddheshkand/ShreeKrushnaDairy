@@ -24,5 +24,8 @@ urlpatterns = [
                   path('admin/', admin.site.urls),
                   url(r'^$', views.home),
                   url(r'^dairy/', include(('Dairy.urls', 'Dairy'), namespace='dairy')),
-
+                  url(r'^dairy_bachat/', include(('Dairy_Bachat.urls', 'Dairy_Bachat'), namespace='dairy_bachat')),
+                  url(r'^dairy_farm/', include(('Dairy_Farm.urls', 'Dairy_Farm'), namespace='dairy_farm')),
+                  url(r'^dairy_natural_milk/',
+                      include(('Dairy_Natural_Milk.urls', 'Dairy_Natural_Milk'), namespace='dairy_natural_milk')),
               ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

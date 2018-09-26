@@ -8,23 +8,22 @@ from Home.models import UserForm
 # Create your views here.
 @login_required(login_url='/dairy/login')
 def dairy_home(request):
-    userForm = UserForm.objects.all()
-    dict = {}
-    for user in userForm:
+    user_forms = UserForm.objects.all()
+    item_dict = {}
+    for user in user_forms:
         item_list = user.item.split(",")
         for item in item_list:
-            if item in dict:
-                dict[item] += 1
+            if item in item_dict:
+                item_dict[item] += 1
             else:
-                dict[item] = 1
+                item_dict[item] = 1
 
-    print(dict)
-    return render(request, "Dairy/dairy_home.html", {'dict': dict})
+    print(item_dict)
+    return render(request, "Dairy/dairy_home.html", {'dict': item_dict})
 
 
 def login_user(request):
     logout(request)
-    username = password = ''
     if request.POST:
         username = request.POST['username']
         password = request.POST['password']

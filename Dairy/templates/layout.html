@@ -46,20 +46,19 @@
 <body>
 {% block nav %}
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <a class="navbar-brand" href="#">Dairy 360 Suite</a>
+        <a class="navbar-brand" href="{% url 'dairy:home' %}">Dairy 360 Suite</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-5"
                 aria-controls="navbarSupportedContent-5" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent-5">
             <ul class="navbar-nav mr-auto marathi_font-1">
-                <li class="nav-item active">
-                    <a class="nav-link waves-effect waves-light" href="#">होम
-                        <span class="sr-only">(current)</span>
+                <li class="nav-item">
+                    <a class="nav-link waves-effect waves-light" href="{% url 'dairy:home' %}">होम
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link waves-effect waves-light" href="#">वैशिष्ट्ये</a>
+                    <a class="nav-link waves-effect waves-light" href="/">लाईव्ह साईट ला जा </a>
                 </li>
                 <li class="nav-item">
                     <input type="search" placeholder="शोधा" aria-label="Search" class="form-control">

@@ -36,7 +36,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Home',
-    'Dairy'
+    'Dairy',
+    'Dairy_Bachat',
+    'Dairy_Farm',
+    'Dairy_Natural_Milk',
 ]
 
 MIDDLEWARE = [
