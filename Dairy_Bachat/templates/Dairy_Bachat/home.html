@@ -1,1 +1,9 @@
-{% extends 'layout.html' %}
+{% extends 'Dairy/home.html' %}
+
+{% block main %}
+    <ol class="breadcrumb">
+        {% block breadcrumbs %}
+            <li class="breadcrumb-item"><a href="">Bachat</a></li>
+        {% endblock %}
+    </ol>
+{% endblock main %}

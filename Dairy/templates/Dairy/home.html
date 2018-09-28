@@ -1,30 +1,18 @@
 {% extends 'layout.html' %}
 {% load staticfiles %}
+
 {% block style %}
     <style>
-
-        .custom-dashboard-button {
-            font-size: 2em;
-            font-family: Asar, serif;
-            font-weight: bold;
-            width: 100%;
-            height: 200px;
-        }
-
-        .col-md-3 .mr-1 {
-            font-size: 1.4em;
-        }
-
-        @media only screen and (max-width: 767px) {
-            .custom-dashboard-button {
-                font-size: 1.4em;
-                height: 120px;
-            }
-        }
     </style>
-
 {% endblock style %}
+
 {% block main %}
+
+    <ol class="breadcrumb">
+        {% block breadcrumbs %}
+            <li class="breadcrumb-item"><a href="{% url 'dairy:home' %}">मुख्य पान</a></li>
+        {% endblock %}
+    </ol>
     <div class="container-fluid mt-5">
         <div class="row wow fadeIn" style="visibility:visible;animation-name:fadeIn;padding: 40px">
             <div class="col-md-3">
@@ -41,7 +29,7 @@
             </div>
             <div class="col-md-3">
                 <a class="btn btn-primary custom-dashboard-button" href="{% url 'dairy_bachat:home' %}">
-                    <i class="fa fa-money mr-1"></i>
+                    <i class="fa fa-chain mr-1"></i>
                     <br>बचत योजना
                 </a>
             </div>

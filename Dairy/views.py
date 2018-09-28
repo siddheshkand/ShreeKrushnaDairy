@@ -19,7 +19,7 @@ def dairy_home(request):
                 item_dict[item] = 1
 
     print(item_dict)
-    return render(request, "Dairy/dairy_home.html", {'dict': item_dict})
+    return render(request, "Dairy/home.html", {'dict': item_dict})
 
 
 def login_user(request):

@@ -1,7 +1,10 @@
-{% extends 'layout.html' %}
+{% extends 'Dairy/home.html' %}
 
 {% block main %}
-
-    SEE IT EXTENDS
-
+    <ol class="breadcrumb">
+        {% block breadcrumbs %}
+            {{ block.super }}
+            <li class="breadcrumb-item"><a href="">Dairy Farm</a></li>
+        {% endblock %}
+    </ol>
 {% endblock main %}

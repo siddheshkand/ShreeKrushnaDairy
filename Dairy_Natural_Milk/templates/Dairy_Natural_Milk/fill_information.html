@@ -1,4 +1,5 @@
-{% extends 'Dairy/home.html' %}
+{% extends 'Dairy_Natural_Milk/home.html' %}
+
 {% block style %}
     <style>
 
@@ -12,20 +13,22 @@
         }
     </style>
 {% endblock style %}
+
+
 {% block main %}
     <ol class="breadcrumb">
         {% block breadcrumbs %}
             {{ block.super }}
-            <li class="breadcrumb-item"><a href="{% url 'dairy_natural_milk:home' %}">श्रीकृष्ण नॅचरल मिल्क डेअरी</a></li>
+            <li class="breadcrumb-item"><a href="{% url 'dairy_natural_milk:fill_information' %}"> माहिती भरणे</a></li>
         {% endblock %}
     </ol>
+
     <div class="container-fluid mt-5">
         <div class="row wow fadeIn" style="visibility:visible;animation-name:fadeIn;padding: 40px">
             <div class="col-md-3">
-                <a class="btn btn-primary custom-dashboard-button"
-                   href="{% url 'dairy_natural_milk:fill_information' %}">
-                    <i class="fa  fa-info-circle mr-1"></i>
-                    <br> माहिती भरणे
+                <a class="btn btn-primary custom-dashboard-button" href="{% url 'dairy_natural_milk:bank_home' %}">
+                    <i class="fa  fa-bank mr-1"></i>
+                    <br> बँक
                 </a>
             </div>
             <div class="col-md-3">
@@ -36,10 +39,17 @@
             </div>
             <div class="col-md-3">
                 <a class="btn btn-primary custom-dashboard-button" href="#">
-                    <i class="fa   fa-gear mr-1"></i>
-                    <br>सेटअप
+                    <i class="fa   fa-calendar mr-1"></i>
+                    <br>शॉप मंथली
                 </a>
             </div>
+            <div class="col-md-3">
+                <a class="btn btn-primary custom-dashboard-button" href="#">
+                    <i class="fa    fa-repeat mr-1"></i>
+                    <br>शॉप डेली
+                </a>
+            </div>
+
             {#            remove this if content increase#}
             <div class="spacing-box"></div>
         </div>
