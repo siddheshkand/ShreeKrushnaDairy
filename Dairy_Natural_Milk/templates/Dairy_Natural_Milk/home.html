@@ -16,7 +16,8 @@
     <ol class="breadcrumb">
         {% block breadcrumbs %}
             {{ block.super }}
-            <li class="breadcrumb-item"><a href="{% url 'dairy_natural_milk:home' %}">श्रीकृष्ण नॅचरल मिल्क डेअरी</a></li>
+            <li class="breadcrumb-item"><a href="{% url 'dairy_natural_milk:home' %}">श्रीकृष्ण नॅचरल मिल्क डेअरी</a>
+            </li>
         {% endblock %}
     </ol>
     <div class="container-fluid mt-5">
@@ -29,7 +30,7 @@
                 </a>
             </div>
             <div class="col-md-3">
-                <a class="btn btn-primary custom-dashboard-button" href="#">
+                <a class="btn btn-primary custom-dashboard-button" href="{% url 'dairy_natural_milk:printing_home' %}">
                     <i class="fa  fa-print mr-1"></i>
                     <br>छपाई
                 </a>

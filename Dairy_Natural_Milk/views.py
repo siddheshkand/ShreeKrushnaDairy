@@ -35,3 +35,8 @@ def create_transaction(request):
     else:
         form = forms.CreateTransaction()
     return render(request, "Dairy_Natural_Milk/Bank/create_transaction.html", {'form': form, 'message': message})
+
+
+# Printing View
+def printing_home(request):
+    return render(request, 'Dairy_Natural_Milk/Printing/printing_home.html')

@@ -9,4 +9,7 @@ urlpatterns = [
     url(r'^bank_home/', views.bank_home, name='bank_home'),
     # Add transaction
     url(r'^transaction/', views.create_transaction, name='create_transaction'),
+
+    # Printing
+    url(r'^printing_home/', views.printing_home, name='printing_home')
 ]
