@@ -1,0 +1,65 @@
+{% extends 'Dairy_Natural_Milk/Bank/bank_home.html' %}
+{% load widget_tweaks %}
+{% block style %}
+
+    <style>
+        .label_form {
+            text-align: left;
+            margin-bottom: 5px;
+            margin-top: 10px;
+        }
+    </style>
+{% endblock style %}
+{% block main %}
+    <ol class="breadcrumb">
+        {% block breadcrumbs %}
+            {{ block.super }}
+            <li class="breadcrumb-item"><a href="">ट्रांसकशन तयार करा </a></li>
+        {% endblock %}
+    </ol>
+
+    <div class="container">
+        {% if message %}
+            <div class="chip teal lighten-2 white-text waves-effect waves-effect">
+                {{ message }}
+                <i class="close fa fa-times"></i>
+            </div>
+        {% endif %}
+        <div class="d-flex justify-content-center">
+            <form action="" method="post" class="text-center border border-light p-5"
+                  style="margin-bottom:15px;">
+                {#                {{ form.as_p }}#}
+                {% csrf_token %}
+
+                {% for field in form %}
+
+                    {% if field.label == 'Transaction date' %}
+                        <div class="label_form">
+                            <label> {{ field.label }}</label>
+                        </div>
+                        {{ field.error }}
+                        {{ field | add_class:'datepicker form-control' }}
+                    {% else %}
+                        <div class="label_form">
+                            <label> {{ field.label }}</label>
+                        </div>
+                        {{ field.error }}
+                        {{ field | add_class:'form-control' }}
+                    {% endif %}
+
+                {% endfor %}
+
+
+                <br>
+                <input type="submit" name="Submit" value="Submit" class="btn-sm btn-primary">
+            </form>
+        </div>
+
+    </div>
+{% endblock main %}
+{% block script %}
+
+    <script>
+        $('.datepicker').datepicker()
+    </script>
+{% endblock script %}

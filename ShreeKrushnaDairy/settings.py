@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'Dairy_Bachat',
     'Dairy_Farm',
     'Dairy_Natural_Milk',
+    'widget_tweaks',
+
 ]
 
 MIDDLEWARE = [

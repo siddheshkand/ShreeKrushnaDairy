@@ -7,4 +7,6 @@ urlpatterns = [
     url(r'^fill_information/', views.fill_information, name='fill_information'),
     # Bank
     url(r'^bank_home/', views.bank_home, name='bank_home'),
+    # Add transaction
+    url(r'^transaction/', views.create_transaction, name='create_transaction'),
 ]
