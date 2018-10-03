@@ -8,6 +8,22 @@ t_type = (
     ('ol', 'Online'),
 )
 
+# New Account
+RELATIONS = (
+    ('farmer', 'शेतकरी'),
+    ('friend', 'मित्र'),
+    ('family', 'परिवार'),
+    ('customer', 'ग्राहक'),
+    ('Guest', 'पाहुणे'),
+)
+
+
+# शेतकरी
+# मित्र
+# परिवार
+# ग्राहक
+# पाहुणे
+
 
 class Bank(models.Model):
     name_of_bank = models.CharField(max_length=200)
@@ -27,3 +43,13 @@ class Transaction(models.Model):
 
     def __str__(self):
         return self.transaction_name
+
+
+class Account(models.Model):
+    name = models.CharField(max_length=255)
+    address = models.TextField()
+    relation = models.CharField(max_length=100, choices=RELATIONS)
+    mobile = models.CharField(max_length=10)
+    email = models.EmailField(null=True)
+    registration_date = models.DateField(auto_now=True)
+    date_of_birth = models.DateField()

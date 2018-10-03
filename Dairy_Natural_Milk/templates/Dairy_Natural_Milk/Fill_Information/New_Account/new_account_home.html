@@ -1,0 +1,69 @@
+{% extends 'Dairy_Natural_Milk/Fill_Information/fill_information_home.html' %}
+{% load widget_tweaks %}
+{% block style %}
+
+    <style>
+        .label_form {
+            text-align: left;
+            margin-bottom: 5px;
+            margin-top: 10px;
+        }
+    </style>
+{% endblock style %}
+{% block main %}
+    <ol class="breadcrumb">
+        {% block breadcrumbs %}
+            {{ block.super }}
+            <li class="breadcrumb-item"><a href="{% url 'dairy_natural_milk:new_account' %}"> नवीन खाते</a></li>
+        {% endblock %}
+    </ol>
+
+    <div class="container-fluid mt-5">
+        {% if message %}
+            <div class="chip teal lighten-2 white-text waves-effect waves-effect">
+                {{ message }}
+                <i class="close fa fa-times"></i>
+            </div>
+        {% endif %}
+    </div>
+    <div class="row" id="message">
+        <div class="text-center">
+
+        </div>
+    </div>
+    <div class="container-fluid mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <form action="" method="post" class="text-center border border-light p-5"
+                      style="margin-bottom:15px;">
+                    {#                {{ form.as_p }}#}
+                    {% csrf_token %}
+
+                    {% for field in form %}
+
+                        {% if field.label == 'Date of birth' %}
+                            <div class="label_form">
+                                <label> {{ field.label }}</label>
+                            </div>
+                            {{ field.error }}
+                            {{ field | add_class:'datepicker form-control' }}
+                        {% else %}
+                            <div class="label_form">
+                                <label> {{ field.label }}</label>
+                            </div>
+                            {{ field.error }}
+                            {{ field | add_class:'form-control marathi_font' }}
+                        {% endif %}
+
+                    {% endfor %}
+
+
+                    <br>
+                    <input type="submit" name="Submit" value="Submit" class="btn-sm btn-primary">
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+{% endblock main %}

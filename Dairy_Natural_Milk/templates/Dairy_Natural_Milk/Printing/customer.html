@@ -1,0 +1,37 @@
+{% extends 'Dairy_Natural_Milk/Printing/printing_home.html' %}
+{% block main %}
+
+    <ol class="breadcrumb">
+        {% block breadcrumbs %}
+            {{ block.super }}
+            <li class="breadcrumb-item"><a href="">ग्राहक खतावनी</a></li>
+        {% endblock %}
+    </ol>
+    <table class="table table-striped">
+        <thead>
+        <tr style="font-family: Asar,serif">
+            <th scope="col">#</th>
+            <th scope="col">पत्ता</th>
+            <th scope="col">संबंध</th>
+            <th scope="col">मोबाईल</th>
+            <th scope="col"> ई-मेल</th>
+            <th scope="col">रेजिस्ट्रेशन तारीख</th>
+            <th scope="col">जन्म तारीख</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for customer in customer_model %}
+            <tr>
+                <td>{{ customer.pk }}</td>
+                <td>{{ customer.name }}</td>
+                <td>{{ customer.address }}</td>
+                <td>{{ customer.relation }}</td>
+                <td>{{ customer.mobile }}</td>
+                <td>{{ customer.email }}</td>
+                <td>{{ customer.registration_date }}</td>
+                <td>{{ customer.date_of_birth }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock main %}

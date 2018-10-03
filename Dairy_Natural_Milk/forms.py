@@ -13,3 +13,16 @@ class CreateTransaction(forms.ModelForm):
             'transaction_type',
             'transaction_date',
         ]
+
+
+class CreateNewAccount(forms.ModelForm):
+    class Meta:
+        model = models.Account
+        fields = [
+            'name',
+            'address',
+            'relation',
+            'mobile',
+            'email',
+            'date_of_birth'
+        ]
